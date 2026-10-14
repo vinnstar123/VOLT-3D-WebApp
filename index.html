@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="VOLT - Power Up.">
+    <meta name="author" content="Vin Sajith">
+    <title>VOLT - Power Up.</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Stack+Sans+Notch:wght@200..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar sticky-top navbar-expand-md navbar_volt">
+        <div class="container-fluid">
+
+            <!-- CSS Logo -->
+            <a class="navbar-brand" href="index.html">
+                <div class="logo">
+                    <h1>VOLT <span class="bolt">⚡</span></h1>
+                    <p class="strapline">Power Up.</p>
+                </div>
+            </a>
+
+            <!-- Hamburger Button for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="viewer.html">3D Viewer</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+                        <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                            <li><a class="dropdown-item" href="viewer.html?model=original">VOLT Original</a></li>
+                            <li><a class="dropdown-item" href="viewer.html?model=sugarfree">VOLT Sugar Free</a></li>
+                            <li><a class="dropdown-item" href="viewer.html?model=bottle">VOLT Original Bottled</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO BANNER -->
+    <section id="hero">
+        <div id="main_3d_image"></div>
+        <div id="main_text">
+            <h2>Charge Your Day.</h2>
+            <p>Three variants. One purpose. Power Up with VOLT.</p>
+            <a href="viewer.html" class="btn btn_volt">Explore in 3D</a>
+        </div>
+    </section>
+
+    <!-- PRODUCT CARDS -->
+    <section id="products" class="container my-3">
+        <div class="row g-4">
+
+            <div class="col-12 col-md-4">
+                <div class="card card_volt h-100">
+                    <img src="assets/images/can_preview_image.png" class="card-img-top" alt="VOLT Original can">
+                    <div class="card-body">
+                        <h3 class="card-title">VOLT Original</h3>
+                        <p class="card-text">The classic charge. Energizing blue lightning.</p>
+                        <a href="viewer.html?model=original" class="btn btn_volt">View in 3D</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card card_volt h-100">
+                    <img src="assets/images/can_sugarfree_preview_image.png" class="card-img-top" alt="VOLT Sugar Free can">
+                    <div class="card-body">
+                        <h3 class="card-title">VOLT Sugar Free</h3>
+                        <p class="card-text">All the power. None of the sugar.</p>
+                        <a href="viewer.html?model=sugarfree" class="btn btn_volt">View in 3D</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card card_volt h-100">
+                    <img src="assets/images/bottle_preview_image.png" class="card-img-top" alt="VOLT Original Bottled">
+                    <div class="card-body">
+                        <h3 class="card-title">VOLT Original Bottled</h3>
+                        <p class="card-text">The original, lighning in a bottle.</p>
+                        <a href="viewer.html?model=bottle" class="btn btn_volt">View in 3D</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer_volt">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-sm">
+                <p class="copyright">&copy; 2026 VOLT Energy. Student submission, Web 3D Applications (H7006).</p>
+                <div class="social ms-auto">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

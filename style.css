@@ -1,0 +1,297 @@
+/* ----- Brand colour variables ----- */
+:root {
+    --volt-blue: #0033A0;
+    --volt-yellow: #FFD700;
+    --volt-navy: #001F5C;
+    --volt-offwhite: #F5F7FA;
+    --volt-text: #1A1A2E;
+}
+
+body {
+    font-family: 'Stack Sans Notch', sans-serif;
+    color: var(--volt-text);
+    background-color: #fffbad;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* NAVBAR */
+.navbar_volt {
+    background-color: var(--volt-blue);
+    padding: 0.5rem 1rem;
+    border-bottom: 3px solid var(--volt-yellow);
+}
+
+/* Logo block */
+.logo h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    color: var(--volt-yellow);
+    font-size: 1.8rem;
+    margin: 0;
+    line-height: 1;
+}
+
+.logo .bolt {
+    color: var(--volt-yellow);
+    text-shadow: 0 0 8px var(--volt-yellow);
+}
+
+.logo .strapline {
+    font-family: 'Stack Sans Notch', sans-serif;
+    font-size: 0.7rem;
+    color: white;
+    margin: 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.navbar-brand:hover .logo h1 {
+    color: white;
+    transition: color 0.3s;
+}
+
+/* Links */
+.navbar_volt .nav-link {
+    color: white !important;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 1rem !important;
+}
+
+.navbar_volt .nav-link:hover,
+.navbar_volt .nav-link.active {
+    color: var(--volt-yellow) !important;
+}
+
+.navbar_volt .navbar-toggler {
+    border-color: var(--volt-yellow);
+}
+.navbar_volt .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23FFD700' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Dropdown menu */
+.navbar_volt .dropdown-menu {
+    background-color: var(--volt-navy);
+    border: 1px solid var(--volt-yellow);
+    border-radius: 0;
+}
+.navbar_volt .dropdown-item {
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+}
+.navbar_volt .dropdown-item:hover {
+    background-color: var(--volt-blue);
+    color: var(--volt-yellow);
+}
+
+/* HERO */
+#hero {
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+    overflow: hidden;
+}
+
+#main_3d_image {
+    width: 100%;
+    height: 200px;
+}
+
+#main_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    background-color: rgba(0, 31, 92, 0.7);
+    border-left: 4px solid var(--volt-yellow);
+    border-right: 4px solid var(--volt-yellow);
+}
+
+#main_text h2 {
+    color: var(--volt-yellow);
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+}
+
+#main_text p {
+    font-size: 0.9rem;
+    margin: 0 0 1rem 0;
+}
+
+/* BUTTONS */
+.btn_volt {
+    background-color: var(--volt-yellow);
+    color: var(--volt-navy);
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 0;
+    padding: 0.6rem 1.5rem;
+    transition: all 0.3s;
+}
+
+.btn_volt:hover {
+    background-color: var(--volt-blue);
+    color: var(--volt-yellow);
+    box-shadow: 0 0 15px var(--volt-yellow);
+}
+
+/* PRODUCT CARDS */
+.card_volt {
+    border: 2px solid var(--volt-blue);
+    border-radius: 0;
+    background-color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card_volt:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 51, 160, 0.3);
+    border-color: var(--volt-yellow);
+}
+
+.card_volt .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    background-color: var(--volt-navy);
+}
+
+.card_volt .card-title {
+    color: var(--volt-blue);
+    font-size: 1.2rem;
+}
+
+.card_volt .card-text {
+    font-size: 0.9rem;
+    color: var(--volt-text);
+}
+
+/* FOOTER */
+.footer_volt {
+    background-color: var(--volt-navy);
+    color: white;
+    padding: 1rem 0;
+    margin-top: 3rem;
+    border-top: 3px solid var(--volt-yellow);
+}
+
+.footer_volt .copyright {
+    color: white;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.footer_volt .social a {
+    color: var(--volt-yellow);
+    font-size: 1.4rem;
+    margin-left: 1rem;
+    transition: color 0.3s;
+}
+
+.footer_volt .social a:hover {
+    color: white;
+}
+
+/*Mobile First Approach */
+@media (min-width: 576px) {
+    .logo h1 { font-size: 2.2rem; }
+    #main_3d_image { height: 230px; }
+    #main_text h2 { font-size: 1.8rem; }
+}
+
+@media (min-width: 768px) {
+    .logo h1 { font-size: 2.5rem; }
+    #main_3d_image { height: 260px; }
+    #main_text h2 { font-size: 2.2rem; }
+    #main_text p { font-size: 1.1rem; }
+}
+
+@media (min-width: 992px) {
+    #main_3d_image { height: 300px; }
+    #main_text h2 { font-size: 2.8rem; }
+}
+
+@media (min-width: 1200px) {
+    #main_3d_image { height: 340px; }
+}
+
+
+/* 3D VIEWER */
+.viewer_card {
+    border: 2px solid var(--volt-blue);
+    border-radius: 0;
+    background-color: white;
+    overflow: hidden;
+}
+
+.viewer_header {
+    background-color: var(--volt-navy);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 3px solid var(--volt-yellow);
+}
+
+.viewer_header h2 {
+    color: var(--volt-yellow);
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.viewer_header p {
+    margin: 0.3rem 0 0 0;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.canvas_wrapper {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(135deg, var(--volt-navy) 0%, var(--volt-blue) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+#threeContainer {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.button_row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 1rem;
+    background-color: var(--volt-offwhite);
+}
+
+.button_row .btn {
+    flex: 1 1 auto;
+    min-width: 130px;
+}
+
+@media (min-width: 768px) {
+    .canvas_wrapper { height: 500px; }
+}
+
+@media (min-width: 992px) {
+    .canvas_wrapper { height: 600px; }
+}

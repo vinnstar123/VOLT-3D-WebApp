@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="About the VOLT 3D Application">
+    <meta name="author" content="Vin Sajith">
+    <title>VOLT — About</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Stack+Sans+Notch:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar sticky-top navbar-expand-md navbar_volt">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <div class="logo">
+                    <h1>VOLT <span class="bolt">⚡</span></h1>
+                    <p class="strapline">Power Up.</p>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="viewer.html">3D Viewer</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+                        <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                            <li><a class="dropdown-item" href="viewer.html?model=original">VOLT Original</a></li>
+                            <li><a class="dropdown-item" href="viewer.html?model=sugarfree">VOLT Sugar Free</a></li>
+                            <li><a class="dropdown-item" href="viewer.html?model=bottle">VOLT Original Bottled</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ABOUT CONTENT -->
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-12 col-lg-10 offset-lg-1">
+
+                <div class="text_card">
+                    <h1 class="page_title">About VOLT</h1>
+
+                    <p class="lead">VOLT is an interactive 3D web application showcasing three branded energy drink products in 3D in real time, built for a coursework assignment for Web 3D Applications (H7006).<br>
+                    The VOLT 3D App lets users explore three conceptual products: VOLT Original (can), VOLT Sugar Free (can), and VOLT Original Bottled (bottle). Users can explore these products in an interactive 3D viewer and switch between the three products. Each model can be opened with a button click, rotated with the mouse, viewed as a wireframe, and toggle between different lighting moods. Sound effects accompany the opening animations.</p>
+
+                    <h2>Technologies Used</h2>
+                    <p>The application is built to work on varying screen sizes using the following tools:</p>
+                    <ul>
+                        <li><strong>HTML5 &amp; CSS3</strong> for page content and styling, with a custom CSS script over Bootstrap.</li>
+                        <li><strong>Bootstrap 5.3.8</strong> for the responsive grid, navbar, dropdown, and card components.</li>
+                        <li><strong>Three.js r106</strong> for 3D rendering, with OrbitControls for camera navigation, GLTFLoader for loading models, and AnimationMixer for playing keyframed animations.</li>
+                        <li><strong>Blender 4.5.4</strong> for modelling, texturing, and animating all three 3D models.</li>
+                        <li><strong>JavaScript</strong> for all user interactivity: button handlers, model switching, lighting changes, and sound effects.</li>
+                        <li><strong>Google Fonts</strong>: Orbitron for headings, Stack Sans Notch for body, and <strong>Font Awesome</strong> for footer icons.</li>
+                    </ul>
+
+                    <h2>Interactive Features</h2>
+                    <p>The 3D viewer page includes the following interactive features:</p>
+                    <ul>
+                        <li><strong>Animation playback</strong>: clicking the Open 'Product' button triggers the Blender animation through Three.js.</li>
+                        <li><strong>Wireframe toggle</strong>: goes through the loaded model's mesh and flips each material's wireframe property.</li>
+                        <li><strong>Rotation toggle</strong>: a continuous rotation applied inside the render loop in javascript (a second form of animation, distinct from the Blender clip for opening).</li>
+                        <li><strong>Model gallery</strong>: cycles through all three models, with the labels updating appropriately.</li>
+                        <li><strong>Lighting control</strong>: switches between bright studio lighting and a dim product reveal mood.</li>
+                        <li><strong>Sound Effects</strong>: AudioListener attached to the camera plays the appropriate sound effect synchronised with each model's opening animation.</li>
+                    </ul>
+
+                    <h2>Design Choices</h2>
+                    <p>The VOLT brand uses an electric blue (#0033A0) and a lightning yellow (#FFD700) palette, paired with Orbitron which is a futuristic and geometric font to reinforce the energy drink theme. The lightning bolt logo appears throughout the application. The blue and grey pattern on the can evokes motorsport liveries, reinforcing the brand's high-performance and high-octane aesthetic.</p>
+
+                    <h2>Reflection</h2>
+                    <p>The most challenging part of this project was integrating the .glb 3D files exported from Blender into the Three.js scene and displaying the animation clips, particularly when implementing the model-switching gallery since each new model requires its own AnimationMixer instance and a clean removal of the previous model from the scene to avoid memory leaks. Combining the JavaScript-driven rotation with the Blender animation required care to ensure both could run simultaneously without interfering.</p>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer_volt">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-sm">
+                <p class="copyright">&copy; 2026 VOLT Energy. Student submission, Web 3D Applications (H7006).</p>
+                <div class="social ms-auto">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>
